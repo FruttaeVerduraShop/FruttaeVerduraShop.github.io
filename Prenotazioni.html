@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="icon" href="mela.ico" type="image/x-icon" />
+<link href="stile.css" rel="stylesheet" type="text/css">
+<title>Fruttivendolo</title>    
+</head>
+<body align="center" alink="red" vlink="red" link="red">
+<table>
+<tr>
+<header id="Intestazione">
+<h1 >Frutta e Verdura<br>Shop</br></h1> 
+</header>
+<a href="Fruttivendolo.html"><p id="Home">Home</p></a>
+<div id="Mappa" align="center">
+<p style="margin-bottom:40px;font-size:35px;color:yellow;text-shadow:2px 1px red;">Prenota i tuoi Prodotti</p>
+<br><p style="font-size:25px;color:yellow;text-shadow:2px 1px red;">Numero di telefono</p></br>
+<br><input id="numeroditelefono" type="text" /></br>
+<br><p style="font-size:25px;color:yellow;text-shadow:2px 1px red;">Scrivi l'elenco dei prodotti che hai scelto: </br><br>(separandoli da spazio e punto e virgola)</p></br>
+<br><textarea id="prodotti" rows="10" cols="30"></textarea><br/>
+<br><input type="button" onClick="Email()" value="Manda la Prenotazione" id="Richiesta"/></br>
+</div>
+</body>
+</tr>
+</table>
+</html>
+<script>
+function Email()
+{
+var numeroditelefono=document.getElementById("numeroditelefono").value;
+var prodotti=document.getElementById("prodotti").value;
+location.href = "mailto:pasquale.cuzzupi@studenti.liceozaleuco.it?Subject=Frutta e Verdura Shop&Body=" + "+39" + numeroditelefono + ";   " + prodotti;
+}
+</script>
